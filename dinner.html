@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Challenge: The dinner table</title>
+</head>
+<body>
+
+    <h1>Our dinner menu</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Meal</th>
+                <th>Ingredients</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="menuTableBody">
+
+        </tbody>
+    </table>
+
+    <script>
+        // Updated sample data for the dinner menu
+        var dinnerMenu = [
+            { meal: "Spaghetti Bolognese", ingredients: "Ground beef, tomatoes, pasta", price: "$12.99" },
+            { meal: "Chicken Caesar Salad", ingredients: "Grilled chicken, romaine lettuce, croutons", price: "$9.99" },
+            { meal: "Margherita Pizza", ingredients: "Tomato sauce, fresh mozzarella, basil", price: "$14.99" },
+            { meal: "Grilled Salmon", ingredients: "Salmon fillet, lemon, herbs", price: "$18.99" },
+            { meal: "Vegetarian Stir-Fry", ingredients: "Assorted vegetables, tofu, soy sauce", price: "$11.99" },
+            { meal: "Beef Tacos", ingredients: "Ground beef, tortillas, lettuce, cheese", price: "$10.99" }
+        ];
+
+        // Function to populate the table with menu data
+        function populateMenuTable() {
+            var tableBody = document.getElementById("menuTableBody");
+
+            dinnerMenu.forEach(function (item) {
+                var row = document.createElement("tr");
+                row.innerHTML = "<td>" + item.meal + "</td><td>" + item.ingredients + "</td><td>" + item.price + "</td>";
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Call the function to populate the table
+        populateMenuTable();
+    </script>
+
+</body>
+</html>
