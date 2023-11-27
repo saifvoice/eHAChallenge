@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: Stopwatch</title>
+    </head>
+    <body>
+        
+        <button id="stop-button" type="button">Stop</button>
+        <p>
+            <span id="seconds">0</span> seconds have gone by!
+        </p>
+        <script>
+            var seconds = document.getElementById("seconds");
+            var intervalId;  // Variable to store the interval ID
+
+            var countUp = function() {
+                // Increment the seconds and update the display
+                var currentSeconds = parseInt(seconds.innerText, 10);
+                seconds.innerText = currentSeconds + 1;
+            };
+            
+            var stopCountUp = function() {
+                // Stop the counting by clearing the interval
+                clearInterval(intervalId);
+            };
+
+            var stopButton = document.getElementById("stop-button");
+            stopButton.addEventListener("click", stopCountUp);
+
+            // Start counting when the page loads
+            intervalId = setInterval(countUp, 1000);  // Update every 1000 milliseconds (1 second)
+            
+        </script>
+    </body>
+</html>

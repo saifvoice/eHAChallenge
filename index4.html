@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Change 'doth' to 'does'</title>
+    <style>
+        /* Add any necessary styles here */
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><span class="doth">Query 1: Why doth an apple fall?</span></li>
+        <li><span class="doth">Query 2: How doth the moon influence the tides?</span></li>
+        <!-- More list items with doth spans... -->
+    </ul>
+
+    <script>
+        // Find all spans with class 'doth' inside the list and store them in a variable
+        var dothSpans = document.querySelectorAll("ul li span.doth");
+
+        // Use a for loop to iterate over the NodeList and change the text to 'does'
+        for (var i = 0; i < dothSpans.length; i++) {
+            dothSpans[i].textContent = 'does';
+        }
+    </script>
+
+</body>
+
+</html>
